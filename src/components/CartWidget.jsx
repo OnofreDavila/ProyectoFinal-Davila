@@ -1,5 +1,10 @@
 import React from "react";
+import { TiShoppingCart } from "react-icons/ti";
 
 export const CartWidget = () => {
-  return <div>CartWidget</div>;
+  return (
+    <div>
+      <TiShoppingCart fontSize={"1.5rem"} />
+    </div>
+  );
 };

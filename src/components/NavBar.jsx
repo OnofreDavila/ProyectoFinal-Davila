@@ -10,7 +10,6 @@ export const NavBar = () => {
           Poleras Niños
         </a>
         <a className="text-white text-decoration-none" href="#">
-          {" "}
           Poleras
         </a>
         <a className="text-white text-decoration-none" href="#">
