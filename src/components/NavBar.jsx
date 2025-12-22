@@ -9,7 +9,7 @@ export const NavBar = () => {
         <Container className="d-flex align-items-center  justify-content-between flex-wrap">
           <div className="d-flex align-items-center flex-wrap gap-3">
             <Navbar.Brand href="#" className="text-white">
-              Proyect Conspiracy
+              <img src="./logoPC.png" alt="logo" height={40} />
             </Navbar.Brand>
             <Nav className="me-auto d-flex flex-row gap-3 flex-wrap">
               <Nav.Link href="#" className="text-white">
