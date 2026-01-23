@@ -5,7 +5,7 @@ const products = [
     description: "polera numero 1",
     stock: 10,
     price: 25000,
-    categoria: "polera adulto",
+    category: "Men",
     img: "https://i.postimg.cc/V6XJp8ZY/1.jpg",
   },
   {
@@ -14,7 +14,7 @@ const products = [
     description: "polera numero 2",
     stock: 20,
     price: 25000,
-    categoria: "polera adulto",
+    category: "Men",
     img: "https://i.postimg.cc/nzqXgJSm/2.jpg",
   },
   {
@@ -23,7 +23,7 @@ const products = [
     description: "polera numero 3",
     stock: 30,
     price: 25000,
-    categoria: "polera adulto",
+    category: "Men",
     img: "https://i.postimg.cc/RFwWyBpK/3.jpg",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     description: "polera numero 4",
     stock: 40,
     price: 15000,
-    categoria: "polera niño",
+    category: "Women",
     img: "https://i.postimg.cc/QtcFw3YK/4.jpg",
   },
   {
@@ -41,7 +41,7 @@ const products = [
     description: "polera numero 5",
     stock: 50,
     price: 15000,
-    categoria: "polera niño",
+    category: "Women",
     img: "https://i.postimg.cc/yxBDzb2Z/5.jpg",
   },
   {
@@ -50,7 +50,7 @@ const products = [
     description: "polera numero 6",
     stock: 60,
     price: 15000,
-    categoria: "polera niño",
+    category: "Women",
     img: "https://i.postimg.cc/D0FSKMRQ/6.jpg",
   },
   {
@@ -59,7 +59,7 @@ const products = [
     description: "polera numero 7",
     stock: 70,
     price: 15000,
-    categoria: "polera niño",
+    category: "Kids",
     img: "https://i.postimg.cc/yxPk6TzP/7.jpg",
   },
   {
@@ -68,7 +68,7 @@ const products = [
     description: "polera numero 8",
     stock: 80,
     price: 15000,
-    categoria: "polera niño",
+    category: "Kids",
     img: "https://i.postimg.cc/RhRNCTzP/8.jpg",
   },
 ];
@@ -82,6 +82,7 @@ const products = [
 // https://i.postimg.cc/D0FSKMRQ/6.jpg
 // https://i.postimg.cc/yxPk6TzP/7.jpg
 // https://i.postimg.cc/RhRNCTzP/8.jpg
+
 let error = false;
 export const getProducts = () => {
   return new Promise((resolve, reject) => {
@@ -91,6 +92,21 @@ export const getProducts = () => {
       } else {
         resolve(products);
       }
-    }, 2000);
+    }, 1000);
+  });
+};
+
+export const getOneProduct = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (error) {
+        reject("hubo un error intente mas tarde");
+      } else {
+        //realizamos una comprobacion del id
+        let product = products.find((prod) => prod.id === id);
+        //resolve(products[id]);
+        resolve(product);
+      }
+    }, 1000);
   });
 };

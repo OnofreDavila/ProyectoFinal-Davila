@@ -1,25 +1,33 @@
 import React from "react";
 import { CartWidget } from "./CartWidget";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <>
-      <Navbar className="bg-secondary">
+      <Navbar className="bg-secondary container">
         <Container className="d-flex align-items-center  justify-content-between flex-wrap">
           <div className="d-flex align-items-center flex-wrap gap-3">
-            <Navbar.Brand href="#" className="text-white">
+            <Navbar.Brand as={NavLink} to="/" className="text-white">
               <img src="./logoPC.png" alt="logo" height={40} />
             </Navbar.Brand>
             <Nav className="me-auto d-flex flex-row gap-3 flex-wrap">
-              <Nav.Link href="#" className="text-white">
+              <Nav.Link as={NavLink} to="/" className="text-white">
                 Home
               </Nav.Link>
-              <Nav.Link href="#" className="text-white">
-                Poleras Adultos
+              <Nav.Link as={NavLink} to="/category/Men" className="text-white">
+                Men
               </Nav.Link>
-              <Nav.Link href="#" className="text-white">
-                Poleras Niños
+              <Nav.Link
+                as={NavLink}
+                to="/category/Women"
+                className="text-white"
+              >
+                Women
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/category/Kids" className="text-white">
+                Kids
               </Nav.Link>
             </Nav>
           </div>
