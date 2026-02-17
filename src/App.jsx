@@ -6,6 +6,7 @@ import { Error } from "./components/Error";
 import { CartProvider } from "./context/CartContext";
 import { CartContainer } from "./components/CartContainer";
 import { Checkout } from "./components/Checkout";
+import { Footer } from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </CartProvider>
     </BrowserRouter>
   );

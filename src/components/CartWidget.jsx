@@ -11,10 +11,5 @@ export const CartWidget = () => {
       <TiShoppingCart className="cart-icon" />
       {cart.length > 0 && <span className="cart-badge">{cartQuantity()}</span>}
     </div>
-
-    // <div>
-    //   <TiShoppingCart fontSize={"1.5rem"} color="white" />
-    //   {cart.length > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
-    // </div>
   );
 };

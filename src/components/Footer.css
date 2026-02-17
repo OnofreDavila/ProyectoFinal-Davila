@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@400;600&display=swap');
+
+/* ════════════════════════════════════════
+   FOOTER — Conspiracy Clothing
+   Estética: editorial urbana / streetwear
+════════════════════════════════════════ */
+
+.footer {
+  background: #050505;
+  border-top: 3px solid var(--accent-yellow);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Cinta ticker animada ───────────────────────────────────── */
+.footer-tape {
+  background: var(--accent-yellow);
+  color: var(--primary-dark);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  padding: 0.55rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* La cinta es un texto muy largo que se desplaza */
+  animation: ticker 28s linear infinite;
+  will-change: transform;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Cuerpo principal (grid asimétrico) ─────────────────────── */
+.footer-body {
+  display: grid;
+  /* brand | nav | info | deco */
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  padding: 4rem 3rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ── Columna de marca ───────────────────────────────────────── */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  transition: filter 0.3s ease;
+  align-self: flex-start;
+}
+
+.footer-logo:hover {
+  filter: brightness(0) saturate(100%)
+          invert(89%) sepia(47%) saturate(500%)
+          hue-rotate(5deg) brightness(103%);   /* vira a amarillo */
+}
+
+.footer-tagline {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.tagline-accent {
+  font-weight: 600;
+  color: var(--accent-yellow);
+}
+
+/* Redes sociales */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(176, 176, 176, 0.25);
+  color: var(--text-gray);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent-yellow);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.social-link:hover {
+  border-color: var(--accent-yellow);
+  color: var(--primary-dark);
+}
+
+.social-link:hover::before {
+  transform: translateY(0);
+}
+
+.social-link svg,
+.social-link > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Columnas nav / info ────────────────────────────────────── */
+.footer-nav-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  color: var(--text-light);
+  margin: 0 0 1.25rem 0;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-nav-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--accent-orange);
+  transition: width 0.4s ease;
+}
+
+.footer-nav:hover .footer-nav-title::after,
+.footer-info:hover .footer-nav-title::after {
+  width: 100%;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-link {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-yellow);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-yellow);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ── Columna decorativa — tipografía gigante ────────────────── */
+.footer-deco-col {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.footer-deco-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(6rem, 10vw, 11rem);
+  line-height: 1;
+  letter-spacing: -4px;
+
+  /* Outline solamente — sin relleno */
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(244, 224, 77, 0.15);
+
+  user-select: none;
+  transition: -webkit-text-stroke 0.4s ease;
+}
+
+.footer-deco-col:hover .footer-deco-text {
+  -webkit-text-stroke: 1.5px rgba(244, 224, 77, 0.55);
+}
+
+/* ── Divider ────────────────────────────────────────────────── */
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(244, 224, 77, 0.4) 30%,
+    rgba(255, 107, 53, 0.4) 70%,
+    transparent 100%
+  );
+  margin: 0 3rem;
+}
+
+/* ── Pie de página ──────────────────────────────────────────── */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-copy,
+.footer-made {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(176, 176, 176, 0.5);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.heart {
+  color: var(--accent-orange);
+  display: inline-block;
+  animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  20%       { transform: scale(1.3); }
+  40%       { transform: scale(1); }
+  60%       { transform: scale(1.15); }
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .footer-body {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    padding: 3rem 2rem 2rem;
+  }
+
+  /* La columna "PC" baja debajo del grid */
+  .footer-deco-col {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-deco-text {
+    font-size: clamp(5rem, 12vw, 8rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-body {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-divider,
+  .footer-bottom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-body {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.25rem 1.25rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+
+  .footer-tape {
+    font-size: 0.8rem;
+  }
+}
