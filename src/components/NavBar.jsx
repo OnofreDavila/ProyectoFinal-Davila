@@ -11,7 +11,7 @@ export const NavBar = () => {
           <div className="navbar-left">
             <Navbar.Brand as={NavLink} to="/" className="brand-logo">
               <img src="./logoPC.png" alt="logo" className="logo-img" />
-              <span className="brand-text">CONSPIRACY</span>
+              <span className="brand-text"> PROYECT CONSPIRACY</span>
             </Navbar.Brand>
             <Nav className="nav-links">
               <Nav.Link as={NavLink} to="/" className="nav-item">
