@@ -55,15 +55,19 @@ Para ver el proyecto online, debe ingresar al siguiene link:[Coder App](https://
 
 ### Backend & Database
 
--[Firebase Firestore](): Base de datos NoSQL en tiempo real
+-[Firebase Firestore](https://firebase.google.com/): Base de datos NoSQL en tiempo real
 
 ### Estilos
 
--[CSS3 puro](): Diseño custom sin frameworks -[Google Fonts](): Bebas Neue y Archivo -[Animaciones CSS](): Transiciones y efectos personalizados
+-[CSS3 puro](https://developer.mozilla.org/es/docs/Web/CSS): Diseño custom sin frameworks.
+
+-[Google Fonts](https://fonts.google.com/specimen/Bebas+Neue): Bebas Neue y Archivo.
+
+-[Animaciones CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation): Transiciones y efectos personalizados.
 
 ### Build y Deploy
 
--[Vite](): Build tool y dev server -[Vercel](): Hosting y deployment continuo
+-[Vite](https://vite.dev/): Build tool y dev server -[Vercel](): Hosting y deployment continuo
 
 ## 🔧 Instalación
 
@@ -72,15 +76,6 @@ Para ver el proyecto online, debe ingresar al siguiene link:[Coder App](https://
 - Node.js v24.13.0
 - npm o yarn
 - Cuenta de Firebase
-
-## 🛠️ Instalacion
-
-1. Clone el repositorio.
-2. Moverse a la carpeta creada con el comando "CreaTuLanding1-Davila"
-3. Ejecute el comando 'npm-install' para instalar dependencias y crear la carpeta node_modules.
-4. ejecute el comando 'npm run dev' para levantarlo en servidor local
-
-> Es necesario contar con Node v24.13.0
 
 ### Pasos
 
@@ -145,7 +140,7 @@ ProyectoFinal-Davila/
 │   ├── service/
 │   │   └── firebase.js      # Configuración de Firebase
 │   └── main.jsx             # Punto de entrada
-├── .env.example             # Plantilla de variables de entorno
+├── .env                     # Plantilla de variables de entorno
 ├── .gitignore               # Archivos ignorados por Git
 ├── package.json             # Dependencias y scripts
 ├── vite.config.js           # Configuración de Vite
@@ -159,7 +154,6 @@ El diseño está inspirado en la estética **streetwear urbana** con:
 - **Paleta de colores oscura**: Negro profundo con acentos amarillo (#f4e04d) y naranja (#ff6b35)
 - **Tipografía bold**: Bebas Neue para títulos y Archivo para texto
 - **Animaciones suaves**: Fade in, slide in, hover effects
-- **Layout asimétrico**: Composición editorial moderna
 - **Micro-interacciones**: Feedback visual en todas las acciones
 
 ## 🤝 Contribuciones
