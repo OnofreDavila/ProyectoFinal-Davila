@@ -174,9 +174,9 @@ Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LI
 
 **Onofre Davila**
 
-- Portfolio: [DavilaOnofre.com](https://portafolioonofredavila.netlify.app/)
-- GitHub: [@tu-usuario](https://github.com/OnofreDavila)
-- LinkedIn: [TOnofre Davila](www.linkedin.com/in/onofredavila)
+- Portfolio: [Portafolio Onofre Davila](https://portafolioonofredavila.netlify.app/)
+- GitHub: [Onofre Davila](https://github.com/OnofreDavila)
+- LinkedIn: [Onofre Davila](www.linkedin.com/in/onofredavila)
 
 ---
 
