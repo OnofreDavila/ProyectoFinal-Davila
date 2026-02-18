@@ -15,9 +15,6 @@ Para ver el proyecto online, debe ingresar al siguiene link:[Coder App](https://
 - [Stack Tecnológico](#️-stack-tecnológico)
 - [Capturas de Pantalla](#-capturas-de-pantalla)
 - [Instalación](#-instalación)
-- [Variables de Entorno](#-variables-de-entorno)
-- [Scripts Disponibles](#-scripts-disponibles)
-- [Deployment](#-deployment)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Autor](#-autor)
 
